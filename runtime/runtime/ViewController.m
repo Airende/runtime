@@ -18,11 +18,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    //方法交换Demo
     NSURL *url = [NSURL URLWithString:@"www.baidu.com"];
     
     NSLog(@"%@",url);
     
 //    [NSURL performSelector:<#(SEL)#>]
+    
+    
     
 }
 

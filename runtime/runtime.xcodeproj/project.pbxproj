@@ -16,6 +16,8 @@
 		90D1F4601FDF725500CE1DC9 /* runtimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D1F45F1FDF725500CE1DC9 /* runtimeTests.m */; };
 		90D1F46B1FDF725500CE1DC9 /* runtimeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D1F46A1FDF725500CE1DC9 /* runtimeUITests.m */; };
 		90D1F47A1FDF73D800CE1DC9 /* NSURL+ARDURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D1F4791FDF73D800CE1DC9 /* NSURL+ARDURL.m */; };
+		90D1F47D1FDFA9C600CE1DC9 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D1F47C1FDFA9C600CE1DC9 /* Person.m */; };
+		90D1F4801FDFB07500CE1DC9 /* NSObject+ARDKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D1F47F1FDFB07500CE1DC9 /* NSObject+ARDKVO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		90D1F46C1FDF725500CE1DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90D1F4781FDF73D800CE1DC9 /* NSURL+ARDURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+ARDURL.h"; sourceTree = "<group>"; };
 		90D1F4791FDF73D800CE1DC9 /* NSURL+ARDURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+ARDURL.m"; sourceTree = "<group>"; };
+		90D1F47B1FDFA9C600CE1DC9 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		90D1F47C1FDFA9C600CE1DC9 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		90D1F47E1FDFB07500CE1DC9 /* NSObject+ARDKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+ARDKVO.h"; sourceTree = "<group>"; };
+		90D1F47F1FDFB07500CE1DC9 /* NSObject+ARDKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ARDKVO.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +114,12 @@
 				90D1F4471FDF725500CE1DC9 /* AppDelegate.m */,
 				90D1F4491FDF725500CE1DC9 /* ViewController.h */,
 				90D1F44A1FDF725500CE1DC9 /* ViewController.m */,
+				90D1F47B1FDFA9C600CE1DC9 /* Person.h */,
+				90D1F47C1FDFA9C600CE1DC9 /* Person.m */,
 				90D1F4781FDF73D800CE1DC9 /* NSURL+ARDURL.h */,
 				90D1F4791FDF73D800CE1DC9 /* NSURL+ARDURL.m */,
+				90D1F47E1FDFB07500CE1DC9 /* NSObject+ARDKVO.h */,
+				90D1F47F1FDFB07500CE1DC9 /* NSObject+ARDKVO.m */,
 				90D1F44C1FDF725500CE1DC9 /* Main.storyboard */,
 				90D1F44F1FDF725500CE1DC9 /* Assets.xcassets */,
 				90D1F4511FDF725500CE1DC9 /* LaunchScreen.storyboard */,
@@ -270,8 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D1F4801FDFB07500CE1DC9 /* NSObject+ARDKVO.m in Sources */,
 				90D1F44B1FDF725500CE1DC9 /* ViewController.m in Sources */,
 				90D1F4561FDF725500CE1DC9 /* main.m in Sources */,
+				90D1F47D1FDFA9C600CE1DC9 /* Person.m in Sources */,
 				90D1F47A1FDF73D800CE1DC9 /* NSURL+ARDURL.m in Sources */,
 				90D1F4481FDF725500CE1DC9 /* AppDelegate.m in Sources */,
 			);

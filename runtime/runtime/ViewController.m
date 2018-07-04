@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Person.h"
 #import <objc/message.h>
+#import "RuntimeTest1ViewController.h"
 
 #import "NSObject+ARDKVO.h"
 
@@ -24,6 +25,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake(15, 75, 200, 50);
+    button.layer.cornerRadius = 3;
+    button.layer.borderWidth = 0.8;
+    button.layer.borderColor = [UIColor brownColor].CGColor;
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setTitle:@"runtime1" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(jumpRuntimeVC1) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
     
     //方法交换Demo
     NSURL *url = [NSURL URLWithString:@"www.baidu.com"];
@@ -65,5 +76,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)jumpRuntimeVC1{
+    RuntimeTest1ViewController *runtimeVC = [[RuntimeTest1ViewController alloc] init];
+    [self.navigationController pushViewController:runtimeVC animated:YES];
+}
 
 @end

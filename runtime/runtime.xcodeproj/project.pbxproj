@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90CE59D720ECB12F00415703 /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE59D620ECB12F00415703 /* MyClass.m */; };
+		90CE59DD20ECB29700415703 /* RuntimeTest1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE59DC20ECB29700415703 /* RuntimeTest1ViewController.m */; };
 		90D1F4481FDF725500CE1DC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D1F4471FDF725500CE1DC9 /* AppDelegate.m */; };
 		90D1F44B1FDF725500CE1DC9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D1F44A1FDF725500CE1DC9 /* ViewController.m */; };
 		90D1F44E1FDF725500CE1DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D1F44C1FDF725500CE1DC9 /* Main.storyboard */; };
@@ -38,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90CE59D120ECA01200415703 /* runtime_classAndObjective.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = runtime_classAndObjective.h; sourceTree = "<group>"; };
+		90CE59D520ECB12F00415703 /* MyClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
+		90CE59D620ECB12F00415703 /* MyClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
+		90CE59DB20ECB29700415703 /* RuntimeTest1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeTest1ViewController.h; sourceTree = "<group>"; };
+		90CE59DC20ECB29700415703 /* RuntimeTest1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTest1ViewController.m; sourceTree = "<group>"; };
 		90D1F4431FDF725500CE1DC9 /* runtime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runtime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D1F4461FDF725500CE1DC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90D1F4471FDF725500CE1DC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +94,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90CE59DE20ECF2B900415703 /* Runtime1_classAndObjective */ = {
+			isa = PBXGroup;
+			children = (
+				90CE59D120ECA01200415703 /* runtime_classAndObjective.h */,
+				90CE59D520ECB12F00415703 /* MyClass.h */,
+				90CE59D620ECB12F00415703 /* MyClass.m */,
+				90CE59DB20ECB29700415703 /* RuntimeTest1ViewController.h */,
+				90CE59DC20ECB29700415703 /* RuntimeTest1ViewController.m */,
+			);
+			path = Runtime1_classAndObjective;
+			sourceTree = "<group>";
+		};
 		90D1F43A1FDF725500CE1DC9 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +139,7 @@
 				90D1F4791FDF73D800CE1DC9 /* NSURL+ARDURL.m */,
 				90D1F47E1FDFB07500CE1DC9 /* NSObject+ARDKVO.h */,
 				90D1F47F1FDFB07500CE1DC9 /* NSObject+ARDKVO.m */,
+				90CE59DE20ECF2B900415703 /* Runtime1_classAndObjective */,
 				90D1F44C1FDF725500CE1DC9 /* Main.storyboard */,
 				90D1F44F1FDF725500CE1DC9 /* Assets.xcassets */,
 				90D1F4511FDF725500CE1DC9 /* LaunchScreen.storyboard */,
@@ -285,7 +305,9 @@
 				90D1F4561FDF725500CE1DC9 /* main.m in Sources */,
 				90D1F47D1FDFA9C600CE1DC9 /* Person.m in Sources */,
 				90D1F47A1FDF73D800CE1DC9 /* NSURL+ARDURL.m in Sources */,
+				90CE59DD20ECB29700415703 /* RuntimeTest1ViewController.m in Sources */,
 				90D1F4481FDF725500CE1DC9 /* AppDelegate.m in Sources */,
+				90CE59D720ECB12F00415703 /* MyClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

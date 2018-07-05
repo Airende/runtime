@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		90CE59D720ECB12F00415703 /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE59D620ECB12F00415703 /* MyClass.m */; };
 		90CE59DD20ECB29700415703 /* RuntimeTest1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE59DC20ECB29700415703 /* RuntimeTest1ViewController.m */; };
+		90CE59E520EDF06D00415703 /* SUTRuntimeMethodHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE59E420EDF06D00415703 /* SUTRuntimeMethodHelper.m */; };
+		90CE59E820EDF0DD00415703 /* SUTRuntimeMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CE59E720EDF0DD00415703 /* SUTRuntimeMethodViewController.m */; };
 		90D1F4481FDF725500CE1DC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D1F4471FDF725500CE1DC9 /* AppDelegate.m */; };
 		90D1F44B1FDF725500CE1DC9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D1F44A1FDF725500CE1DC9 /* ViewController.m */; };
 		90D1F44E1FDF725500CE1DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D1F44C1FDF725500CE1DC9 /* Main.storyboard */; };
@@ -45,6 +47,12 @@
 		90CE59D620ECB12F00415703 /* MyClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
 		90CE59DB20ECB29700415703 /* RuntimeTest1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeTest1ViewController.h; sourceTree = "<group>"; };
 		90CE59DC20ECB29700415703 /* RuntimeTest1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTest1ViewController.m; sourceTree = "<group>"; };
+		90CE59E020EDB78800415703 /* Runtime2_variableAndProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Runtime2_variableAndProperty.h; sourceTree = "<group>"; };
+		90CE59E220EDC0FC00415703 /* Runtime3_methodAndMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Runtime3_methodAndMessage.h; sourceTree = "<group>"; };
+		90CE59E320EDF06D00415703 /* SUTRuntimeMethodHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUTRuntimeMethodHelper.h; sourceTree = "<group>"; };
+		90CE59E420EDF06D00415703 /* SUTRuntimeMethodHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUTRuntimeMethodHelper.m; sourceTree = "<group>"; };
+		90CE59E620EDF0DD00415703 /* SUTRuntimeMethodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SUTRuntimeMethodViewController.h; sourceTree = "<group>"; };
+		90CE59E720EDF0DD00415703 /* SUTRuntimeMethodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SUTRuntimeMethodViewController.m; sourceTree = "<group>"; };
 		90D1F4431FDF725500CE1DC9 /* runtime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runtime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D1F4461FDF725500CE1DC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90D1F4471FDF725500CE1DC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -106,6 +114,26 @@
 			path = Runtime1_classAndObjective;
 			sourceTree = "<group>";
 		};
+		90CE59DF20EDB72400415703 /* Runtime2_variableAndProperty */ = {
+			isa = PBXGroup;
+			children = (
+				90CE59E020EDB78800415703 /* Runtime2_variableAndProperty.h */,
+			);
+			path = Runtime2_variableAndProperty;
+			sourceTree = "<group>";
+		};
+		90CE59E120EDC05B00415703 /* Runtime3_methodAndMessage */ = {
+			isa = PBXGroup;
+			children = (
+				90CE59E220EDC0FC00415703 /* Runtime3_methodAndMessage.h */,
+				90CE59E320EDF06D00415703 /* SUTRuntimeMethodHelper.h */,
+				90CE59E420EDF06D00415703 /* SUTRuntimeMethodHelper.m */,
+				90CE59E620EDF0DD00415703 /* SUTRuntimeMethodViewController.h */,
+				90CE59E720EDF0DD00415703 /* SUTRuntimeMethodViewController.m */,
+			);
+			path = Runtime3_methodAndMessage;
+			sourceTree = "<group>";
+		};
 		90D1F43A1FDF725500CE1DC9 = {
 			isa = PBXGroup;
 			children = (
@@ -139,7 +167,9 @@
 				90D1F4791FDF73D800CE1DC9 /* NSURL+ARDURL.m */,
 				90D1F47E1FDFB07500CE1DC9 /* NSObject+ARDKVO.h */,
 				90D1F47F1FDFB07500CE1DC9 /* NSObject+ARDKVO.m */,
+				90CE59E120EDC05B00415703 /* Runtime3_methodAndMessage */,
 				90CE59DE20ECF2B900415703 /* Runtime1_classAndObjective */,
+				90CE59DF20EDB72400415703 /* Runtime2_variableAndProperty */,
 				90D1F44C1FDF725500CE1DC9 /* Main.storyboard */,
 				90D1F44F1FDF725500CE1DC9 /* Assets.xcassets */,
 				90D1F4511FDF725500CE1DC9 /* LaunchScreen.storyboard */,
@@ -304,9 +334,11 @@
 				90D1F44B1FDF725500CE1DC9 /* ViewController.m in Sources */,
 				90D1F4561FDF725500CE1DC9 /* main.m in Sources */,
 				90D1F47D1FDFA9C600CE1DC9 /* Person.m in Sources */,
+				90CE59E820EDF0DD00415703 /* SUTRuntimeMethodViewController.m in Sources */,
 				90D1F47A1FDF73D800CE1DC9 /* NSURL+ARDURL.m in Sources */,
 				90CE59DD20ECB29700415703 /* RuntimeTest1ViewController.m in Sources */,
 				90D1F4481FDF725500CE1DC9 /* AppDelegate.m in Sources */,
+				90CE59E520EDF06D00415703 /* SUTRuntimeMethodHelper.m in Sources */,
 				90CE59D720ECB12F00415703 /* MyClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

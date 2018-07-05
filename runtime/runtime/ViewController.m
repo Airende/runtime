@@ -10,6 +10,7 @@
 #import "Person.h"
 #import <objc/message.h>
 #import "RuntimeTest1ViewController.h"
+#import "SUTRuntimeMethodViewController.h"
 
 #import "NSObject+ARDKVO.h"
 
@@ -34,6 +35,16 @@
     [button setTitle:@"runtime1" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(jumpRuntimeVC1) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    
+    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
+    button1.frame = CGRectMake(15, 155, 200, 50);
+    button1.layer.cornerRadius = 3;
+    button1.layer.borderWidth = 0.8;
+    button1.layer.borderColor = [UIColor brownColor].CGColor;
+    [button1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button1 setTitle:@"runtime3" forState:UIControlStateNormal];
+    [button1 addTarget:self action:@selector(jumpRuntimeVC3) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button1];
     
     
     //方法交换Demo
@@ -79,6 +90,11 @@
 
 - (void)jumpRuntimeVC1{
     RuntimeTest1ViewController *runtimeVC = [[RuntimeTest1ViewController alloc] init];
+    [self.navigationController pushViewController:runtimeVC animated:YES];
+}
+
+- (void)jumpRuntimeVC3{
+    SUTRuntimeMethodViewController *runtimeVC = [[SUTRuntimeMethodViewController alloc] init];
     [self.navigationController pushViewController:runtimeVC animated:YES];
 }
 

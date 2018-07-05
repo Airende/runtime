@@ -12,6 +12,7 @@
 
 #endif /* runtime_classAndObjective_h */
 
+源地址：http://southpeak.github.io/2014/10/25/objective-c-runtime-1/
 
 
 Objective-C类是由Class类型来表示的，它实际上是一个指向objc_class结构体的指针。它的定义如下：
@@ -29,7 +30,7 @@ typedef struct objc_class *Class;
         long info                                OBJC2_UNAVAILABLE;    // 类信息，供运行期使用的一些位标识
         long instance_size                       OBJC2_UNAVAILABLE;    // 该类的实例变量大小
         struct objc_ivar_list *ivars             OBJC2_UNAVAILABLE;    // 该类的成员变量链表
-        struct objc_method_list **methodLists     OBJC2_UNAVAILABLE;    // 方法定义的链表
+        struct objc_method_list *methodLists     OBJC2_UNAVAILABLE;    // 方法定义的链表
         struct objc_cache *cache                  OBJC2_UNAVAILABLE;    // 方法缓存
         struct objc_protocol_list *protocols     OBJC2_UNAVAILABLE;    // 协议链表
     #endif
@@ -96,7 +97,7 @@ meta-class之所以重要，是因为它存储着一个类的所有类方法。�
 类名(name)  注意返回值
 // 获取类的类名
 const char * class_getName ( Class cls );
-注：对于class_getName函数，如果传入的cls为Nil，则返回一个字字符串。
+注：对于class_getName函数，如果传入的cls为Nil，则返回一个字符串。
 -----
 父类(super_class)和元类(meta-class)
 // 获取类的父类
@@ -115,13 +116,13 @@ size_t class_getInstanceSize ( Class cls );
 说明：在objc_class中，所有的成员变量、属性的信息是放在链表ivars中的。ivars是一个数组，数组中每个元素是指向Ivar(变量信息)的指针。runtime提供了丰富的函数来操作这一字段。
 1 >成员变量操作函数，主要包含以下函数：
 // 获取类中指定名称实例成员变量的信息
-Ivar class_getInstanceVariable ( Class cls, const char *name );
+Ivar class_getInstanceVariable ( Class cls, const char *name );//const char *name :指定的参数名 "_aString"
 // 获取类成员变量的信息
 Ivar class_getClassVariable ( Class cls, const char *name );
 // 添加成员变量
 BOOL class_addIvar ( Class cls, const char *name, size_t size, uint8_t alignment, const char *types );
 // 获取整个成员变量列表
-Ivar * class_copyIvarList ( Class cls, unsigned int *outCount );
+Ivar * class_copyIvarList ( Class cls, unsigned int *outCount );//unsigned int *outCount :列表的数量，定义 unsigned int outCount = 0， 使用 &outCount
 
 注：
     1.class_getInstanceVariable函数，它返回一个指向包含name指定的成员变量信息的objc_ivar结构体的指针(Ivar)。
@@ -132,9 +133,9 @@ Ivar * class_copyIvarList ( Class cls, unsigned int *outCount );
 
 2 >属性操作函数，主要包含以下函数：
 // 获取指定的属性
-objc_property_t class_getProperty ( Class cls, const char *name );
+objc_property_t class_getProperty ( Class cls, const char *name );  //返回值 objc_property_t  具体的某个参数
 // 获取属性列表
-objc_property_t * class_copyPropertyList ( Class cls, unsigned int *outCount );
+objc_property_t * class_copyPropertyList ( Class cls, unsigned int *outCount ); //objc_property_t * 一个参数数组，遍历获取 objc_property_t
 // 为类添加属性
 BOOL class_addProperty ( Class cls, const char *name, const objc_property_attribute_t *attributes, unsigned int attributeCount );
 // 替换类的属性
@@ -222,7 +223,7 @@ id instance = [[cls alloc] init];
 [instance performSelector:@selector(method1)];
 
 ---------------
-|* 动态创建对象 *|
+|* 动态创建对象 *| /* ARC环境下无法使用 */
 ---------------
 // 创建类实例
 id class_createInstance ( Class cls, size_t extraBytes );

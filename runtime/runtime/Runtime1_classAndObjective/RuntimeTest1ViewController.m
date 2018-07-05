@@ -22,8 +22,8 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-//    [self runtimeTest1];
-    [self createClass];
+    [self runtimeTest1];
+//    [self createClass];
     
 }
 

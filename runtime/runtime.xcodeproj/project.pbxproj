@@ -57,6 +57,7 @@
 		90CE59EA20EE09D500415703 /* Runtime4_methodSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Runtime4_methodSwizzling.h; sourceTree = "<group>"; };
 		90CE59EB20EE0E8300415703 /* UIViewController+Tracking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Tracking.h"; sourceTree = "<group>"; };
 		90CE59EC20EE0E8300415703 /* UIViewController+Tracking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Tracking.m"; sourceTree = "<group>"; };
+		90CE59EF20EE17E000415703 /* Runtime5_protocolAndCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Runtime5_protocolAndCategory.h; sourceTree = "<group>"; };
 		90D1F4431FDF725500CE1DC9 /* runtime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = runtime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D1F4461FDF725500CE1DC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		90D1F4471FDF725500CE1DC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -148,6 +149,14 @@
 			path = Runtime4_methodSwizzling;
 			sourceTree = "<group>";
 		};
+		90CE59EE20EE179B00415703 /* Runtime5_protocolAndCategory */ = {
+			isa = PBXGroup;
+			children = (
+				90CE59EF20EE17E000415703 /* Runtime5_protocolAndCategory.h */,
+			);
+			path = Runtime5_protocolAndCategory;
+			sourceTree = "<group>";
+		};
 		90D1F43A1FDF725500CE1DC9 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +190,7 @@
 				90D1F4791FDF73D800CE1DC9 /* NSURL+ARDURL.m */,
 				90D1F47E1FDFB07500CE1DC9 /* NSObject+ARDKVO.h */,
 				90D1F47F1FDFB07500CE1DC9 /* NSObject+ARDKVO.m */,
+				90CE59EE20EE179B00415703 /* Runtime5_protocolAndCategory */,
 				90CE59DE20ECF2B900415703 /* Runtime1_classAndObjective */,
 				90CE59DF20EDB72400415703 /* Runtime2_variableAndProperty */,
 				90CE59E120EDC05B00415703 /* Runtime3_methodAndMessage */,

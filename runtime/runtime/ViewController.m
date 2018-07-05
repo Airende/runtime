@@ -23,6 +23,11 @@
 
 @implementation ViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];//-> 已经指向 xxx-viewWillAppear 方法的实现
+    NSLog(@"---");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
